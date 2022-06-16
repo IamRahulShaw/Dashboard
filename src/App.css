@@ -1,38 +1,831 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Outfit:wght@500;600&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div#main {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div#Left-Nav-Section {
+  width: 274px;
+  height: 761px;
+  background: #04293A;
+  position: fixed;
+}
+
+div#Right-Main-Section {
+  width: 1092px;
+  height: 758px;
+  position: absolute;
+  /* overflow-y: scroll; */
+}
+
+#Nav-Items-Top {
+  position: absolute;
+  left: 62px;
+  top: 37px;
+}
+
+#Nav-Items-Middle {
+  position: absolute;
+  left: 62px;
+  top: 169px;
+}
+
+#Nav-Items-Middle ul {
+  list-style: none;
+  height: 178.49px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+#Nav-Items-Bottom {
+  position: absolute;
+  left: 62px;
+  top: 72.8%;
+}
+
+#Top-Header {
+  position: absolute;
+  width: 382px;
+  height: 48px;
+  left: 858px;
+  top: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+
+#Place-Order-Button {
+  width: 149.64px;
+}
+
+#Place-Order-Button button {
+  width: 149.64px;
+  height: 48.64px;
+  cursor: pointer;
+  background: #04293A;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 17.8182px 31.8182px;
+  gap: 5.09px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 13px;
+  text-align: center;
+  color: #D1D1D1;
 }
 
-.App-link {
-  color: #61dafb;
+#VPPL {
+  width: 89.66px;
+  height: 37.66px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Bell {
+  width: 24px;
+  height: 24px;
+}
+
+#Cases-Header {
+  position: absolute;
+  width: 922.66px;
+  height: 107.29px;
+  left: 336px;
+  top: 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#Cases-Header .Cases {
+  position: relative;
+  width: 271.66px;
+  height: 105.91px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6.87747px;
+}
+
+#Cases-Header .Cases img {
+  position: absolute;
+  width: 48.14px;
+  height: 48.14px;
+  left: 28px;
+  top: 27.62px;
+}
+
+#Cases-Header .Cases .Cases-Number {
+  position: absolute;
+  width: 58px;
+  height: 17px;
+  left: 96.28px;
+  top: 34.39px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19.2569px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+#Cases-Header .Cases .Cases-Line {
+  position: absolute;
+  width: 88px;
+  height: 12px;
+  left: 96.28px;
+  top: 61.9px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.62846px;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+}
+
+#Track-Your-Order-Section {
+  position: absolute;
+  width: 947px;
+  height: 199px;
+  left: 326px;
+  top: 301px;
+}
+
+#Track-Your-Order-Section #Track-Your-Order-Text {
+  position: absolute;
+  width: 198px;
+  height: 30px;
+  left: 10px;
+  top: 0px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+#Track-Your-Order-Section #Progression-Header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  position: absolute;
+  width: 947px;
+  height: 53px;
+  left: 0px;
+  top: 46px;
+}
+
+#Progression-Header #Right-Side-Progression-Header {
+  width: 828px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  left: 109px;
+}
+
+#Right-Side-Progression-Header ul {
+  width: 828px;
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#Right-Side-Progression-Header ul li.Progression-Header-Text {
+  list-style: none;
+  height: 10px;
+  display: inline-block;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 10px;
+  padding: 0 5px;
+  text-align: center;
+  color: #04293A;
+}
+
+#Right-Side-Progression-Header ul li.Progression-Header-Line {
+  list-style: none;
+  width: 0px;
+  height: 15px;
+  position: relative;
+  bottom: 2px;
+}
+
+#Progression-Header #Order-Id {
+  width: 89px;
+  height: 33px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 60px;
+  text-align: center;
+  color: #04293A;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+#Track-Your-Order-Section #Order-Id-Code {
+  position: absolute;
+  width: 89px;
+  height: 92px;
+  left: 10px;
+  top: 107px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#Order-Id-Code .Order-Id-Code-Text {
+  width: 89px;
+  height: 14px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+}
+
+#Track-Your-Order-Section #Progression {
+  position: absolute;
+  width: 757px;
+  height: 93px;
+  left: 139px;
+  top: 106px;
+}
+
+#Mandi-Price-Section {
+  position: absolute;
+  width: 922px;
+  height: 230px;
+  left: 335px;
+  top: 571px;
+}
+
+#Mandi-Price-Section #Mandi-Price-Text {
+  position: absolute;
+  width: 153px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+#Mandi-Price-Section .Mandi-Price-Card {
+  position: absolute;
+  width: 270px;
+  height: 166px;
+  left: 1px;
+  top: 64px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.Mandi-Price-Card .Price-Card-Image {
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  left: 13px;
+  top: 36px;
+}
+
+.Mandi-Price-Card .Price-Card-Firstline {
+  position: absolute;
+  width: 155px;
+  height: 40px;
+  left: 102px;
+  top: 27px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21.0909px;
+  line-height: 102.7%;
+  text-align: center;
+  color: #000000;
+}
+
+.Mandi-Price-Card .Price-Card-Secondline {
+  position: absolute;
+  width: 100.76px;
+  height: 18.03px;
+  left: 129.58px;
+  top: 74px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14.8485px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.Mandi-Price-Card .Price-Card-Thirdline {
+  position: absolute;
+  width: 124.09px;
+  height: 16.97px;
+  left: 117.91px;
+  top: 100.52px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12.7273px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.Mandi-Price-Card .Rectangle-Price-Card {
+  position: absolute;
+  width: 87px;
+  height: 32px;
+  left: 183px;
+  top: 134px;
+  background: #064663;
+  border-radius: 20px 0px 20px 20px;
+}
+
+.Mandi-Price-Card svg {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 202px;
+  top: 146px;
+}
+
+.Mandi-Price-Card .Percentage-Text {
+  position: absolute;
+  width: 38px;
+  height: 19px;
+  left: 219px;
+  top: 141px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14.2246px;
+  line-height: 18px;
+  color: #ECB365;
+
+}
+
+.Farmer-Section {
+  position: absolute;
+  width: 471px;
+  height: 650.85px;
+  left: 326px;
+  top: 839px;
+}
+
+.Farmer-Section .Farmer-Text {
+  position: absolute;
+  width: 67px;
+  height: 17px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19.2569px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.Farmer-Card {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 471px;
+  height: 187.85px;
+  background: #064663;
+  border: 0.75898px solid #E5E5E5;
+  border-radius: 6.07184px;
+}
+
+.Farmer-Card .Farmer-Image {
+  position: absolute;
+  left: 3.18%;
+  right: 89.38%;
+  top: 5.32%;
+  bottom: 73.38%;
+  border-radius: 10px;
+}
+
+.Farmer-Card .Farmer-Name {
+  position: absolute;
+  left: 12.53%;
+  right: 76.86%;
+  top: 9.7%;
+  bottom: 78.06%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19.3372px;
+  line-height: 23px;
+  color: #D1D1D1;
+}
+
+.Farmer-Card .Farmer-Rating {
+  position: absolute;
+  left: 25.08%;
+  right: 59.77%;
+  top: 13.24%;
+  bottom: 81.63%;
+}
+
+.Farmer-Card .Farmer-Crop {
+  position: absolute;
+  left: 5.31%;
+  right: 82.59%;
+  top: 44.18%;
+  bottom: 21.21%;
+}
+
+.Farmer-Card .Crop-Background {
+  position: absolute;
+  left: 4.03%;
+  right: 81.32%;
+  top: 38.86%;
+  bottom: 19.08%;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+.Farmer-Card .Farmer-First-Heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #D1D1D1;
+}
+
+.Farmer-Card .Farmer-First-Heading-Text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ECB365;
+}
+
+.Farmer-Card .Farmer-Location-Heading {
+  position: absolute;
+  left: 22.29%;
+  right: 66.04%;
+  top: 30.34%;
+  bottom: 61.14%;
+  width: 55px;
+}
+
+.Farmer-Card .Farmer-Location-Text {
+  position: absolute;
+  left: 22.29%;
+  right: 61.15%;
+  top: 41.37%;
+  bottom: 48.51%;
+  width: 78px;
+}
+
+.Farmer-Card .Farmer-Current-Crop-Heading {
+  position: absolute;
+  left: 45.44%;
+  right: 37.79%;
+  top: 30.34%;
+  bottom: 61.14%;
+  width: 79px;
+}
+
+.Farmer-Card .Farmer-Current-Crop-Text {
+  position: absolute;
+  left: 48.01%;
+  right: 27.78%;
+  top: 41.37%;
+  bottom: 48.51%;
+  width: 114px;
+}
+
+.Farmer-Card .Farmer-Average-Weight-Heading {
+  position: absolute;
+  left: 75.16%;
+  right: 4.25%;
+  top: 30.34%;
+  bottom: 61.14%;
+  width: 97px;
+}
+
+.Farmer-Card .Farmer-Average-Weight-Text {
+  position: absolute;
+  left: 77.74%;
+  right: 15.26%;
+  top: 41.37%;
+  bottom: 48.51%;
+  width: 33px;
+}
+
+.Farmer-Card .First-Circle {
+  position: absolute;
+  left: 46.13%;
+  right: 52.58%;
+  top: 43.71%;
+  bottom: 51.06%;
+}
+
+.Farmer-Card .Second-Circle {
+  position: absolute;
+  left: 75.65%;
+  right: 23.27%;
+  top: 43.36%;
+  bottom: 50.92%;
+}
+
+.Farmer-Desc {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 9.8px;
+  position: absolute;
+  left: 31.63%;
+  right: 12.74%;
+  top: 61.75%;
+  bottom: 8.44%;
+  background: #ECB365;
+  border-radius: 6.8616px;
+}
+
+.Farmer-Desc .Farmer-Second-Heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.7627px;
+  line-height: 14px;
+  text-align: center;
+  color: #064663;
+}
+
+.Farmer-Desc .Farmer-Second-Heading-Text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.7627px;
+  line-height: 14px;
+  text-align: center;
+  color: #064663;
+}
+
+.Farmer-Desc .Farmer-Desc-Date {
+  position: absolute;
+  left: 3.82%;
+  right: 72.14%;
+  top: 17.86%;
+  bottom: 57.14%;
+}
+
+.Farmer-Desc .Farmer-Desc-EDH {
+  position: absolute;
+  left: 11.67%;
+  right: 79.55%;
+  top: 49.36%;
+  bottom: 25.64%;
+}
+
+.Farmer-Desc .Farmer-Desc-Quantity {
+  position: absolute;
+  left: 40.21%;
+  right: 44.52%;
+  top: 17.86%;
+  bottom: 57.14%;
+}
+
+.Farmer-Desc .Farmer-Desc-Exp-Quantity {
+  position: absolute;
+  left: 35.35%;
+  right: 39.46%;
+  top: 49.36%;
+  bottom: 25.64%;
+}
+
+.Farmer-Desc .Farmer-Desc-Price {
+  position: absolute;
+  left: 68.02%;
+  right: 3.74%;
+  top: 17.86%;
+  bottom: 57.14%;
+}
+
+.Farmer-Desc .Farmer-Desc-Exp-Price {
+  position: absolute;
+  left: 72.88%;
+  right: 8.42%;
+  top: 49.36%;
+  bottom: 25.64%;
+}
+
+.Farmer-Desc .First-Line {
+  position: absolute;
+  top: 10px;
+  left: 82.8px;
+}
+
+.Farmer-Desc .Second-Line {
+  position: absolute;
+  top: 10px;
+  left: 168.41px;
+}
+
+#Daily-Covid-Test {
+  position: absolute;
+  width: 392px;
+  height: 615.33px;
+  left: 865px;
+  top: 847px;
+}
+
+#Export-Ledger {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18.8776px 33.7101px;
+  gap: 5.39px;
+  position: absolute;
+  width: 175.42px;
+  height: 42.38px;
+  left: 216.13px;
+  top: 0;
+  background: #04293A;
+  border-radius: 10.5946px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.8919px;
+  line-height: 13px;
+  text-align: center;
+  color: #D1D1D1;
+}
+
+#Report-Card {
+  position: absolute;
+  width: 392px;
+  height: 567.66px;
+  left: 0px;
+  top: 47.68px;
+  background: #FFFFFF;
+  border-radius: 9.92405px;
+  filter: drop-shadow(0px 0px 5.2973px rgba(0, 0, 0, 0.25));
+}
+
+.Data-Font-Style {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13.8895px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+#Product-Buyed {
+  position: absolute;
+  width: 93px;
+  height: 24px;
+  left: 29.77px;
+  top: 24.81px;
+}
+
+#Month {
+  position: absolute;
+  width: 53px;
+  height: 24px;
+  left: 286.05px;
+  top: 24.81px;
+}
+
+#Arrow {
+  position: absolute;
+  width: 19.85px;
+  height: 19.85px;
+  left: 342.38px;
+  top: 27.79px;
+}
+
+#Divider {
+  position: absolute;
+  width: 392px;
+  height: 0px;
+  left: 0px;
+  top: 73.44px;
+}
+
+#Chart {
+  position: absolute;
+  width: 247.22px;
+  height: 247.22px;
+  left: 64.78px;
+  top: 96.53px;
+
+}
+
+#Total-Product-Buyed {
+  position: absolute;
+  width: 129px;
+  height: 24px;
+  left: 124.58px;
+  top: 195.5px;
+}
+
+#Product-Number {
+  position: absolute;
+  width: 42px;
+  height: 16px;
+  left: 179.29px;
+  top: 227.26px;
+}
+
+#Report-Card .Data-Section {
+  position: absolute;
+  width: 313.58px;
+  height: 172.95px;
+  left: 39.7px;
+  top: 365.2px;
+}
+
+.Data-Section .Section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 312.31px;
+  height: 18px;
+}
+
+.Section .Data-Section-Name-Style {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.8937px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #A6ACBE;
+}
+
+.Section .Data-Section-Ellipse {
+  position: absolute;
+  top: 3.97px;
+  left: 0;
+}
+
+.Section .Data-Section-Name {
+  position: absolute;
+  left: 19.85px;
+  top: 0;
+  width: 123px;
+  height: 18px;
+}
+
+.Section .Data-Section-Number {
+  position: absolute;
+  width: 72px;
+  height: 16px;
+  left: 240.31px;
+  bottom: 2px;
 }
